@@ -300,8 +300,7 @@ if ($foo) {
                     $prevToken = $tokens[$tokens->getPrevMeaningfulToken($index)];
 
                     if (
-                        !$prevToken->isGivenKind([T_ARRAY, T_STRING, T_VARIABLE, T_FN, T_FUNCTION, T_CLASS, CT::T_BRACE_CLASS_INSTANTIATION_CLOSE])
-                        && !$prevToken->equals(')')
+                        !$prevToken->equals(')')
                     ) {
                         $innerIndent = false;
                     }
