@@ -425,14 +425,14 @@ final class TypeExpression
         } elseif ('' !== ($matches['callable'][0] ?? '') && $matches['callable'][1] === $nullableLength) {
             $this->parseCallableTemplateInnerTypes(
                 $index + \strlen($matches['callable_name'][0])
-                    + \strlen($matches['callable_template_start'][0]),
+                + \strlen($matches['callable_template_start'][0]),
                 $matches['callable_template_inners'][0]
             );
 
             $this->parseCallableArgumentTypes(
                 $index + \strlen($matches['callable_name'][0])
-                    + \strlen($matches['callable_template'][0])
-                    + \strlen($matches['callable_start'][0]),
+                + \strlen($matches['callable_template'][0])
+                + \strlen($matches['callable_start'][0]),
                 $matches['callable_arguments'][0]
             );
 

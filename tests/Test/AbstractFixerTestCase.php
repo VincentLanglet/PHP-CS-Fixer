@@ -550,7 +550,7 @@ abstract class AbstractFixerTestCase extends TestCase
             array_filter(
                 $reflectionClass->getMethods(\ReflectionMethod::IS_PUBLIC),
                 static fn (\ReflectionMethod $method): bool => $method->getDeclaringClass()->getName() === $reflectionClass->getName()
-                    && !\in_array($method->getName(), $methodNames, true)
+                && !\in_array($method->getName(), $methodNames, true)
             )
         );
 
